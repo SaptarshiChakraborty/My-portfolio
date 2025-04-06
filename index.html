@@ -1,99 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+import { useEffect } from 'react';
+import Typed from 'typed.js';
+import { Mail, Linkedin } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Saptarshi Chakraborty – Sales Leader and Data Enthusiast Portfolio" />
-  <title>Saptarshi Chakraborty | Sales Leader Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-</head>
-
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white">
-    <h1 class="text-4xl sm:text-6xl font-bold mb-4">Hi, I'm Saptarshi Chakraborty</h1>
-    <p id="typed-text" class="text-xl sm:text-2xl font-medium"></p>
-    <a href="#projects" class="mt-8 px-6 py-3 bg-white text-blue-800 rounded-xl text-lg font-semibold hover:bg-gray-200 transition">Explore My Work</a>
-  </section>
-
-  <!-- Navigation -->
-  <nav class="bg-white shadow fixed top-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <span class="font-bold text-xl text-blue-900">Saptarshi</span>
-      <div class="space-x-4 text-gray-700">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#linkedin-projects" class="hover:text-blue-600">LinkedIn</a>
-        <a href="#kaggle-projects" class="hover:text-blue-600">Kaggle</a>
-        <a href="#certificates" class="hover:text-blue-600">Certificates</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I'm a Sales Team Lead at Parablu Softwares with a passion for tech, storytelling, and analytics. With a background in Automobile Engineering and experience in data analytics, I merge business strategy with insights to drive results.
-    </p>
-  </section>
-
-  <!-- LinkedIn Projects -->
-  <section id="linkedin-projects" class="bg-white py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10">LinkedIn Content</h2>
-      <p class="text-center mb-6">Check out some of my carousel posts and thought leadership on sales and tech on <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" class="text-blue-700 font-semibold hover:underline">LinkedIn</a>.</p>
-    </div>
-  </section>
-
-  <!-- Kaggle Projects -->
-  <section id="kaggle-projects" class="bg-gray-100 py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10">Kaggle Projects</h2>
-      <p class="text-center mb-6">Explore how I work with data, visualizations, and insights on <a href="https://www.kaggle.com/" target="_blank" class="text-blue-700 font-semibold hover:underline">Kaggle</a>.</p>
-    </div>
-  </section>
-
-  <!-- Certificates -->
-  <section id="certificates" class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10">Certificates</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Sample certificate card -->
-      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Google Data Analytics</h3>
-        <p class="text-gray-600">Coursera | 2024</p>
-      </div>
-      <!-- Add more cards as needed -->
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-blue-900 text-white py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Let’s Connect</h2>
-      <p class="mb-6">Have a project, question, or opportunity? Reach out below!</p>
-      <div class="space-x-4">
-        <a href="mailto:saptarshi@example.com" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200">Email Me</a>
-        <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
-    &copy; 2025 Saptarshi Chakraborty. All rights reserved.
-  </footer>
-
-  <!-- Typed.js for typing effect -->
-  <script>
-    var typed = new Typed("#typed-text", {
-      strings: ["Sales Leader", "Data Enthusiast", "Power BI Explorer", "Tech Storyteller"],
-      typeSpeed: 60,
-      backSpeed: 40,
+export default function HomePage() {
+  useEffect(() => {
+    const typed = new Typed('#typed', {
+      strings: [
+        'Sales Team Leader at Parablu Softwares',
+        'Diecast Car Collector & YouTuber',
+        'Data Analytics & Power BI Enthusiast',
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
       loop: true,
     });
-  </script>
-</body>
+    return () => typed.destroy();
+  }, []);
 
-</html>
+  return (
+    <main className="min-h-screen bg-gray-900 text-white px-6 py-12 font-sans">
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Hey, I’m <span className="text-yellow-400">Saptarshi</span>
+          </h1>
+          <div className="text-xl h-12">
+            <span id="typed"></span>
+          </div>
+          <p className="text-gray-300">
+            With a background in Automobile Engineering, I now lead sales at Parablu Softwares, helping businesses secure their data. I also love turning data into stories with Power BI and collecting diecast cars, which I showcase on my YouTube channel.
+          </p>
+          <div className="flex gap-4">
+            <a href="mailto:saptarshi.c@example.com" className="bg-yellow-500 text-black px-4 py-2 rounded-xl hover:bg-yellow-400 flex items-center gap-2">
+              <Mail className="w-5 h-5" /> Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-500 flex items-center gap-2">
+              <Linkedin className="w-5 h-5" /> LinkedIn
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <img src="/image.png" alt="Saptarshi Chakraborty" className="rounded-full w-64 h-64 object-cover border-4 border-yellow-400" />
+        </div>
+      </section>
+
+      <section className="mt-24 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card className="bg-gray-800 rounded-2xl p-6">
+          <CardContent>
+            <h2 className="text-2xl font-semibold text-yellow-400 mb-2">LinkedIn Projects</h2>
+            <p className="text-gray-300">Explore my featured posts and content on LinkedIn related to sales, cybersecurity, and personal branding.</p>
+            <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" className="text-blue-400 underline mt-2 inline-block">View Projects</a>
+          </CardContent>
+        </Card>
+        <Card className="bg-gray-800 rounded-2xl p-6">
+          <CardContent>
+            <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Kaggle Projects</h2>
+            <p className="text-gray-300">Check out my beginner-friendly data analysis and visualization projects on Kaggle.</p>
+            <a href="https://www.kaggle.com/saptarshichakraborty" target="_blank" className="text-blue-400 underline mt-2 inline-block">View Kaggle Profile</a>
+          </CardContent>
+        </Card>
+        <Card className="bg-gray-800 rounded-2xl p-6">
+          <CardContent>
+            <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Certificates</h2>
+            <p className="text-gray-300">Certifications in data analytics, Power BI, sales enablement, and more coming soon.</p>
+          </CardContent>
+        </Card>
+        <Card className="bg-gray-800 rounded-2xl p-6">
+          <CardContent>
+            <h2 className="text-2xl font-semibold text-yellow-400 mb-2">Contact</h2>
+            <p className="text-gray-300">Need help with Power BI, sales, or just want to connect? Reach out anytime!</p>
+            <a href="mailto:saptarshi.c@example.com" className="text-yellow-400 underline mt-2 inline-block">Send me an email</a>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
+  );
+}
