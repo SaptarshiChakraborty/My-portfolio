@@ -1,120 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saptarshi Chakraborty | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
-      background-size: cover;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .left-panel {
-      flex: 1;
-    }
-
-    .left-panel h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      line-height: 1.1;
-    }
-
-    .social-icons {
-      margin: 20px 0;
-    }
-
-    .social-icons a {
-      color: white;
-      margin-right: 15px;
-      font-size: 20px;
-      text-decoration: none;
-    }
-
-    .bio {
-      max-width: 500px;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .right-panel {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .right-panel a {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid white;
-      transition: all 0.3s ease;
-    }
-
-    .right-panel a:hover {
-      color: #ccc;
-      border-bottom: 1px solid #ccc;
-    }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .right-panel {
-        align-items: center;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saptarshi Chakraborty – Sales Leader and Data Enthusiast Portfolio" />
+  <title>Saptarshi Chakraborty | Sales Leader Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="left-panel">
-      <h1>Saptarshi<br>Chakraborty</h1>
-      <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank">📷</a>
-        <a href="https://www.facebook.com" target="_blank">📘</a>
-        <a href="https://twitter.com" target="_blank">🐦</a>
-      </div>
-      <p class="bio">
-        I love solving problems using data and helping businesses make better decisions. With a passion for tech and storytelling, I've worked on diverse projects from dashboards to predictive models. Welcome to my portfolio.
-      </p>
-    </div>
 
-    <div class="right-panel">
-      <a href="#about">About Me</a>
-      <a href="#linkedin-projects">LinkedIn Projects</a>
-      <a href="#kaggle">Kaggle Work</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact Me</a>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white">
+    <h1 class="text-4xl sm:text-6xl font-bold mb-4">Hi, I'm Saptarshi Chakraborty</h1>
+    <p id="typed-text" class="text-xl sm:text-2xl font-medium"></p>
+    <a href="#projects" class="mt-8 px-6 py-3 bg-white text-blue-800 rounded-xl text-lg font-semibold hover:bg-gray-200 transition">Explore My Work</a>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <span class="font-bold text-xl text-blue-900">Saptarshi</span>
+      <div class="space-x-4 text-gray-700">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#linkedin-projects" class="hover:text-blue-600">LinkedIn</a>
+        <a href="#kaggle-projects" class="hover:text-blue-600">Kaggle</a>
+        <a href="#certificates" class="hover:text-blue-600">Certificates</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
     </div>
-  </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I'm a Sales Team Lead at Parablu Softwares with a passion for tech, storytelling, and analytics. With a background in Automobile Engineering and experience in data analytics, I merge business strategy with insights to drive results.
+    </p>
+  </section>
+
+  <!-- LinkedIn Projects -->
+  <section id="linkedin-projects" class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">LinkedIn Content</h2>
+      <p class="text-center mb-6">Check out some of my carousel posts and thought leadership on sales and tech on <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" class="text-blue-700 font-semibold hover:underline">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+  <!-- Kaggle Projects -->
+  <section id="kaggle-projects" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Kaggle Projects</h2>
+      <p class="text-center mb-6">Explore how I work with data, visualizations, and insights on <a href="https://www.kaggle.com/" target="_blank" class="text-blue-700 font-semibold hover:underline">Kaggle</a>.</p>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Certificates</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sample certificate card -->
+      <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Google Data Analytics</h3>
+        <p class="text-gray-600">Coursera | 2024</p>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-900 text-white py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Let’s Connect</h2>
+      <p class="mb-6">Have a project, question, or opportunity? Reach out below!</p>
+      <div class="space-x-4">
+        <a href="mailto:saptarshi@example.com" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200">Email Me</a>
+        <a href="https://www.linkedin.com/in/saptarshichakraborty14/" target="_blank" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
+    &copy; 2025 Saptarshi Chakraborty. All rights reserved.
+  </footer>
+
+  <!-- Typed.js for typing effect -->
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: ["Sales Leader", "Data Enthusiast", "Power BI Explorer", "Tech Storyteller"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+    });
+  </script>
 </body>
+
 </html>
