@@ -1,76 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Saptarshi Chakraborty | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/scrollreveal"></script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1>Saptarshi Chakraborty</h1>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#linkedin-projects">LinkedIn</a></li>
-            <li><a href="#kaggle">Kaggle</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saptarshi Chakraborty | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .left-panel {
+      flex: 1;
+    }
+
+    .left-panel h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      line-height: 1.1;
+    }
+
+    .social-icons {
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-right: 15px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .bio {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .right-panel a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid white;
+      transition: all 0.3s ease;
+    }
+
+    .right-panel a:hover {
+      color: #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right-panel {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h1>Saptarshi<br>Chakraborty</h1>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">📷</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://twitter.com" target="_blank">🐦</a>
       </div>
-    </header>
+      <p class="bio">
+        I love solving problems using data and helping businesses make better decisions. With a passion for tech and storytelling, I've worked on diverse projects from dashboards to predictive models. Welcome to my portfolio.
+      </p>
+    </div>
 
-    <main>
-      <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>I’m a Data Analyst with a background in Automobile Engineering. I specialize in storytelling with data, creating dashboards, and helping businesses grow using analytical insights.</p>
-      </section>
-
-      <section id="linkedin-projects" class="reveal">
-        <h2>LinkedIn Projects</h2>
-        <p>Check out my featured projects:</p>
-        <a class="btn" href="https://www.linkedin.com/in/saptarshichakraborty14/details/featured/" target="_blank">See LinkedIn</a>
-      </section>
-
-      <section id="kaggle" class="reveal">
-        <h2>Kaggle Projects</h2>
-        <p>Explore my data science work:</p>
-        <a class="btn" href="https://www.kaggle.com/vampsinatra/code" target="_blank">Visit Kaggle</a>
-      </section>
-
-      <section id="certificates" class="reveal">
-        <h2>Certificates</h2>
-        <ul>
-          <li>📊 Business Analytics</li>
-          <li>🛠️ Building and Scheduling Projects</li>
-          <li>💹 Financial Markets</li>
-          <li>📈 Data Analytics</li>
-          <li>📣 Marketing Analytics</li>
-          <li>🔍 Google Analytics Qualification</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="reveal">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:saptarshichak14@gmail.com">saptarshichak14@gmail.com</a></p>
-      </section>
-    </main>
-
-    <footer>
-      <p>© 2025 Saptarshi Chakraborty</p>
-    </footer>
-
-    <script>
-      ScrollReveal().reveal('.reveal', { 
-        distance: '30px',
-        duration: 800,
-        easing: 'ease-in-out',
-        origin: 'bottom',
-        interval: 200
-      });
-    </script>
-  </body>
+    <div class="right-panel">
+      <a href="#about">About Me</a>
+      <a href="#linkedin-projects">LinkedIn Projects</a>
+      <a href="#kaggle">Kaggle Work</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </div>
+</body>
 </html>
